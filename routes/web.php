@@ -11,10 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@home')->name('home');
+Route::get('home', 'PageController@home');
+Route::get('about', 'PageController@about')->name('about');
+
+Route::get('posts', 'PostController@index');
+Route::get('posts/{post}', 'PostController@show');
+Route::get('posts/create', 'PostController@create')->middleware('auth');
+Route::post('posts/store', 'PostController@store')->middleware('auth');
+Route::get('posts/{post}/edit', 'PostController@edit');
+Route::put('posts/{post}', 'PostController@update');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', function () {
+    Auth::logout();
+    return redirect()->route('home');
+});
