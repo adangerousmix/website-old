@@ -14,6 +14,10 @@
 Route::get('/', 'PageController@home')->name('home');
 Route::get('home', 'PageController@home');
 Route::get('about', 'PageController@about')->name('about');
+Route::get('comics', 'PageController@comics')->name('comics');
+Route::get('podcast', 'PageController@podcast')->name('podcast');
+Route::get('movies', 'PageController@movies')->name('movies');
+Route::get('tv', 'PageController@tv')->name('tv');
 
 Route::get('posts', 'PostController@index');
 Route::get('posts/{post}', 'PostController@show');

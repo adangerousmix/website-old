@@ -11,6 +11,13 @@ class PageController extends Controller
         return view('pages.about');
     }
 
+    public function comics()
+    {
+        $posts = Post::where('category', 'Comics')->paginate(4);
+
+        return view('pages.comics', compact(['posts']));
+    }
+
     public function home()
     {
         $posts = Post::paginate(4);
@@ -18,5 +25,26 @@ class PageController extends Controller
         $popular = Post::orderBy('view_count', 'desc')->limit(3)->get();
 
         return view('pages.home', compact(['popular', 'posts']));
+    }
+
+    public function movies()
+    {
+        $posts = Post::where('category', 'Movies')->paginate(4);
+
+        return view('pages.movies', compact(['posts']));
+    }
+
+    public function podcast()
+    {
+        $posts = Post::where('category', 'Podcast')->paginate(4);
+
+        return view('pages.podcast', compact(['posts']));
+    }
+
+    public function tv()
+    {
+        $posts = Post::where('category', 'TV')->paginate(4);
+
+        return view('pages.tv', compact(['posts']));
     }
 }
