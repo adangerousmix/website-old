@@ -3,33 +3,17 @@
 @section('content')
     <h2>Popular</h2>
     <div class="card-deck mb-4">
-        <div class="card box-shadow">
-            <a href="#">
-                <img src="https://placehold.it/600x400" class="card-img-top" alt="Placeholder">
-                <div class="card-body">
-                    <small class="text-muted">April 1, 2018</small>
-                    <p>The Legend of the Dark Knight #1</p>
-                </div>
-            </a>
-        </div>
-        <div class="card box-shadow">
-            <a href="#">
-                <img src="https://placehold.it/600x400" class="card-img-top" alt="Placeholder">
-                <div class="card-body">
-                    <small class="text-muted">April 1, 2018</small>
-                    <p>Batman #1</p>
-                </div>
-            </a>
-        </div>
-        <div class="card box-shadow">
-            <a href="#">
-                <img src="https://placehold.it/600x400" class="card-img-top" alt="Placeholder">
-                <div class="card-body">
-                    <small class="text-muted">April 1, 2018</small>
-                    <p>The Flash #1</p>
-                </div>
-            </a>
-        </div>
+        @foreach ($popular as $key => $item)
+            <div class="card box-shadow">
+                <a href="/posts/{{ $item->id }}">
+                    <img src="{{ $item->image }}" class="card-img-top" alt="{{ $item->title }}">
+                    <div class="card-body">
+                        <small class="text-muted">{{ $item->category }} - {{ $item->created_at }}</small>
+                        <p>{{ $item->title }}</p>
+                    </div>
+                </a>
+            </div>
+        @endforeach
     </div>
     <h2>Latest</h2>
     <div class="row mb-4">

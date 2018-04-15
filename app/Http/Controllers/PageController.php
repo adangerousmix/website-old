@@ -15,6 +15,8 @@ class PageController extends Controller
     {
         $posts = Post::paginate(4);
 
-        return view('pages.home', compact(['posts']));
+        $popular = Post::orderBy('view_count', 'desc')->limit(3)->get();
+
+        return view('pages.home', compact(['popular', 'posts']));
     }
 }
