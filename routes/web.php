@@ -19,12 +19,12 @@ Route::get('podcast', 'PageController@podcast')->name('podcast');
 Route::get('movies', 'PageController@movies')->name('movies');
 Route::get('tv', 'PageController@tv')->name('tv');
 
-Route::get('posts', 'PostController@index');
+Route::get('posts', 'PostController@index')->middleware('auth');
 Route::get('posts/{post}', 'PostController@show');
 Route::get('posts/create', 'PostController@create')->middleware('auth');
 Route::post('posts/store', 'PostController@store')->middleware('auth');
-Route::get('posts/{post}/edit', 'PostController@edit');
-Route::put('posts/{post}', 'PostController@update');
+Route::get('posts/{post}/edit', 'PostController@edit')->middleware('auth');
+Route::put('posts/{post}', 'PostController@update')->middleware('auth');
 
 Auth::routes();
 Route::get('logout', function () {

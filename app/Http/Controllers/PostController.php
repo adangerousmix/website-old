@@ -59,8 +59,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        $post->view_count++;
-        $post->save();
+        $post->increment('view_count');
 
         return view('posts.show', compact(['post']));
     }
