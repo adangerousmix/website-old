@@ -21,7 +21,7 @@
 </head>
 <body>
     <header class="container text-center mb-4">
-        <a href="/"><img src="/images/shares/adm_logo.png" alt="A Dangerous Mix Logo" class="logo"></a>
+        <a href="/"><img src="/images/shares/adm_logo.png" alt="A Dangerous Mix Logo" class="logo p-4"></a>
         <nav class="mt-4">
             <ul class="nav justify-content-center">
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>

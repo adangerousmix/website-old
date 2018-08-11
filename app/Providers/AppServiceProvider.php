@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
@@ -17,6 +18,8 @@ class AppServiceProvider extends ServiceProvider
         Paginator::defaultView('pagination::bootstrap-4');
 
         Paginator::defaultSimpleView('pagination::simple-bootstrap-4');
+
+        Schema::defaultStringLength(191);
     }
 
     /**
