@@ -1,9 +1,38 @@
+@import "~bootstrap/scss/bootstrap";
 @import "variables";
 
-@import "~bootstrap/scss/bootstrap";
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
 
 .logo {
-    width: 260px;
+    width: 300px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ff0000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    &.active {
+        color: #660000;
+    }
+
+    &:hover {
+        color: #990000;
+    }
 }
 
 .video-container {
