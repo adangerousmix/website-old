@@ -30,11 +30,7 @@
     <header class="row container mx-auto">
         <div class="col-md-12 text-center my-4">
             <a href="/">
-<<<<<<< HEAD
                 <img src="/images/shares/adm_logo_danger.png" alt="A Dangerous Mix Logo" class="logo align-top pt-1">
-=======
-                <img src="/images/shares/adm_logo.png" alt="A Dangerous Mix Logo" class="logo align-top pt-1">
->>>>>>> 17773492fe01133a17c3c02612a58309246374e2
             </a>
         </div>
         <nav class="navbar navbar-expand-sm navbar-light text-center col-md-12 mb-4" style="background-color: #ffffff;">
