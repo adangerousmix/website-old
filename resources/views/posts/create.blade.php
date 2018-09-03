@@ -2,6 +2,12 @@
 
 @section('title', 'Create Post')
 
+@section('scripts')
+<script src="/vendor/laravel-filemanager/js/lfm.js"></script>
+<script>$('#image').filemanager('image', {prefix: "/bin"});</script>
+<script>$('#podcast').filemanager('file', {prefix: "/bin"});</script>
+@endsection
+
 @section('content')
     <h1>Create Post</h1>
     <form action="/posts/store" method="post">
@@ -21,11 +27,26 @@
         </div>
         <div class="form-group">
             <label for="image">Image</label>
-            <input type="text" class="form-control" name="image" id="image">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <a id="image" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                    <i class="fa fa-picture-o"></i> Choose
+                    </a>
+                </span>
+                <input id="thumbnail" class="form-control" type="text" name="image">
+            </div>
+            <img id="holder" style="margin-top:15px;max-height:100px;">
         </div>
         <div class="form-group">
             <label for="audio">Audio</label>
-            <input type="text" class="form-control" name="audio" id="audio">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <a id="podcast" data-input="audio" class="btn btn-primary">
+                    <i class="fa fa-picture-o"></i> Choose
+                    </a>
+                </span>
+                <input id="audio" class="form-control" type="text" name="audio">
+            </div>
         </div>
         <div class="form-group">
             <label for="category">Category</label>

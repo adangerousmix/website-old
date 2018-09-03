@@ -20,9 +20,11 @@ class PageController extends Controller
 
     public function home()
     {
-        $posts = Post::paginate(4);
+        $posts = Post::where('status', '=', 'Published')
+            ->paginate(4);
 
-        $popular = Post::orderBy('view_count', 'desc')->limit(3)->get();
+        $popular = Post::where('status', '=', 'Published')
+            ->orderBy('view_count', 'desc')->limit(3)->get();
 
         return view('pages.home', compact(['popular', 'posts']));
     }

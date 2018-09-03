@@ -84,7 +84,15 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->slug = $request->slug;
+        $post->image = $request->image;
+        $post->category = $request->category;
+        $post->status = $request->status;
+        $post->save();
+
+        return redirect('/posts');
     }
 
     /**
