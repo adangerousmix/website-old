@@ -42,9 +42,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="/podcast">Podcast</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="/comics">Comics</a>
                     </li>
