@@ -26,6 +26,15 @@ Route::get('posts/{post}/edit', 'PostController@edit')->middleware('auth');
 Route::get('posts/{post}', 'PostController@show');
 Route::put('posts/{post}', 'PostController@update')->middleware('auth');
 
+Route::get('tag/{tag}', function ($tag) {
+    $posts = \App\Post::withAnyTags([$tag])
+        ->with('tags')
+        ->where('status', '=', 'Published')
+        ->paginate(4);
+
+    return view('pages.tag', compact(['posts']));
+});
+
 Auth::routes();
 Route::get('logout', function () {
     Auth::logout();

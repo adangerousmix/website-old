@@ -38,6 +38,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // TODO: Assure slug doesn't already exist.
         Post::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
@@ -45,7 +46,8 @@ class PostController extends Controller
             'slug' => $request->slug,
             'image' => $request->image,
             'category' => $request->category,
-            'status' => $request->status
+            'status' => $request->status,
+            'tags' => explode(', ', $request->tags)
         ]);
 
         return redirect('/posts');
@@ -57,8 +59,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($post)
     {
+        $post = Post::where('id', '=', $post)->with('tags')->first();
+
         $post->increment('view_count');
 
         return view('posts.show', compact(['post']));
@@ -70,8 +74,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($post)
     {
+        $post = Post::where('id', '=', $post)->with('tags')->first();
+
         return view('posts.edit', compact(['post']));
     }
 
@@ -90,6 +96,9 @@ class PostController extends Controller
         $post->image = $request->image;
         $post->category = $request->category;
         $post->status = $request->status;
+
+        $post->syncTags(explode(', ', $request->tags));
+
         $post->save();
 
         return redirect('/posts');

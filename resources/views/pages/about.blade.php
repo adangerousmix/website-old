@@ -15,6 +15,7 @@
     <h2>Recommended Links</h2>
     <ul>
         <li><a href="https://batman-news.com/">Batman News</a></li>
+        <li><a href="https://www.comixology.com/">Comixology</a></li>
         <li><a href="https://www.dcuniverse.com/">DC Universe</a></li>
     </ul>
 @endsection

@@ -58,6 +58,10 @@
             </select>
         </div>
         <div class="form-group">
+            <label for="tags">Tags</label>
+            <input type="text" class="form-control" name="tags" id="tags">
+        </div>
+        <div class="form-group">
             <label for="status">Status</label>
             <select name="status" id="status" class="form-control">
                 <option value="Draft">Draft</option>

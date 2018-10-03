@@ -63,6 +63,10 @@
             </select>
         </div>
         <div class="form-group">
+            <label for="tags">Tags</label>
+            <input type="text" class="form-control" name="tags" id="tags" value="{{ isset($post->tags) ? implode(', ', $post->tags->pluck('name')->all()) : '' }}">
+        </div>
+        <div class="form-group">
             <label for="status">Status</label>
             <select name="status" id="status" class="form-control">
                 <option value="Draft" {{ ($post->status == 'Draft') ? 'selected' : '' }}>Draft</option>
