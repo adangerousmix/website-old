@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>About</h1>
-    <p>A Dangerous Mix is ran by one man who's a simple fan of many various types of entertainment.</p>
+    <p>A Dangerous Mix is ran by one man who's a simple fan of many types of entertainment.</p>
     <h2>Social Links</h2>
     <ul>
         <li><a href="https://facebook.com/adangerousmix">Facebook</a></li>
