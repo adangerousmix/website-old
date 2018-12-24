@@ -94,6 +94,7 @@ class PostController extends Controller
         $post->body = $request->body;
         $post->slug = $request->slug;
         $post->image = $request->image;
+        $post->audio = $request->audio;
         $post->category = $request->category;
         $post->status = $request->status;
 

@@ -32,7 +32,7 @@ Route::get('tag/{tag}', function ($tag) {
         ->where('status', '=', 'Published')
         ->paginate(4);
 
-    return view('pages.tag', compact(['posts']));
+    return view('pages.tag', compact(['posts', 'tag']));
 });
 
 Auth::routes();

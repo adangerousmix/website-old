@@ -50,7 +50,7 @@
                     <i class="fa fa-picture-o"></i> Choose
                     </a>
                 </span>
-                <input id="audio" class="form-control" type="text" name="audio">
+                <input id="audio" class="form-control" type="text" name="audio" value="{{ $post->audio }}">
             </div>
         </div>
         <div class="form-group">
