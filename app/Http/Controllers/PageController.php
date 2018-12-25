@@ -15,7 +15,7 @@ class PageController extends Controller
     {
         $posts = Post::where('category', 'Comics')
             ->where('status', '=', 'Published')
-            ->paginate(4);
+            ->paginate(10);
 
         return view('pages.comics', compact(['posts']));
     }
@@ -23,7 +23,7 @@ class PageController extends Controller
     public function home()
     {
         $posts = Post::where('status', '=', 'Published')
-            ->paginate(4);
+            ->paginate(10);
 
         $popular = Post::where('status', '=', 'Published')
             ->orderBy('view_count', 'desc')->limit(3)->get();
@@ -35,7 +35,7 @@ class PageController extends Controller
     {
         $posts = Post::where('category', 'Movies')
             ->where('status', '=', 'Published')
-            ->paginate(4);
+            ->paginate(10);
 
         return view('pages.movies', compact(['posts']));
     }
@@ -44,7 +44,7 @@ class PageController extends Controller
     {
         $posts = Post::where('category', 'Podcast')
             ->where('status', '=', 'Published')
-            ->paginate(4);
+            ->paginate(10);
 
         return view('pages.podcast', compact(['posts']));
     }
@@ -53,7 +53,7 @@ class PageController extends Controller
     {
         $posts = Post::where('category', 'TV')
             ->where('status', '=', 'Published')
-            ->paginate(4);
+            ->paginate(10);
 
         return view('pages.tv', compact(['posts']));
     }

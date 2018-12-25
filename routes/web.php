@@ -30,7 +30,7 @@ Route::get('tag/{tag}', function ($tag) {
     $posts = \App\Post::withAnyTags([$tag])
         ->with('tags')
         ->where('status', '=', 'Published')
-        ->paginate(4);
+        ->paginate(10);
 
     return view('pages.tag', compact(['posts', 'tag']));
 });

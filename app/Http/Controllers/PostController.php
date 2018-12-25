@@ -38,13 +38,23 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO: Assure slug doesn't already exist.
-        Post::create([
+        $validData = $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+            'slug' => 'required|unique:posts|max:255',
+            'image' => 'required',
+            'category' => 'required',
+            'status' => 'required',
+            'tags' => 'required',
+        ]);
+
+        $post = Post::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
             'body' => $request->body,
             'slug' => $request->slug,
             'image' => $request->image,
+            'audio' => $request->audio,
             'category' => $request->category,
             'status' => $request->status,
             'tags' => explode(', ', $request->tags)
@@ -90,6 +100,16 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        $validData = $request->validate([
+            'title' => 'required|max:255',
+            'body' => 'required',
+            'slug' => 'required|max:255|unique:posts,slug,'.$post->id,
+            'image' => 'required',
+            'category' => 'required',
+            'status' => 'required',
+            'tags' => 'required',
+        ]);
+
         $post->title = $request->title;
         $post->body = $request->body;
         $post->slug = $request->slug;

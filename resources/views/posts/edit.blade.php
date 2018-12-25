@@ -10,6 +10,15 @@
 
 @section('content')
     <h1>Edit Post</h1>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     {{ Form::model($post, ['url' => ['posts', $post->id], 'method' => 'put']) }}
     <input type="hidden" name="_method" value="put">
     {{ Form::close() }}
