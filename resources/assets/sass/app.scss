@@ -34,6 +34,10 @@ ul {
     word-spacing: 2px;
 }
 
+.card {
+    border: 5px solid black;
+}
+
 .img-title {
     border: 10px solid black;
 }
@@ -55,6 +59,11 @@ ul {
     &:hover {
         color: #990000;
     }
+}
+
+.row.cards > div[class*='col-'] {
+    display: flex;
+    flex:1 0 auto;
 }
 
 .video-container {

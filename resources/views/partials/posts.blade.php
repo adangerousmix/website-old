@@ -1,4 +1,4 @@
-<div class="row mb-4">
+<div class="row cards mb-4">
     @foreach ($posts as $key => $post)
         <div class="col-md-6 mb-4">
             <div class="card box-shadow">

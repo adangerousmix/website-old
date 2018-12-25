@@ -11483,6 +11483,10 @@ ul {
   word-spacing: 2px;
 }
 
+.card {
+  border: 5px solid black;
+}
+
 .img-title {
   border: 10px solid black;
 }
@@ -11504,6 +11508,15 @@ ul {
 
 .navbar-light .navbar-nav .nav-link:hover {
   color: #990000;
+}
+
+.row.cards > div[class*='col-'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .video-container {
