@@ -16,8 +16,26 @@ html {
     height: 100%;
 }
 
+p {
+    margin-bottom: 2rem;
+    word-spacing: 2px;
+}
+
+p > img {
+    width: 100%;
+}
+
 small {
     font-size: 70%;
+}
+
+ul {
+    margin-bottom: 2rem;
+    word-spacing: 2px;
+}
+
+.img-title {
+    border: 10px solid black;
 }
 
 .logo {
