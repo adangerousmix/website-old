@@ -1,23 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="fullscreen">
+    @if ($video == 'twitch')
+    <iframe src="https://player.twitch.tv/?channel=adangerousmix&parent=adangerousmix.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    @else
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    @endif
 </div>
 @endsection

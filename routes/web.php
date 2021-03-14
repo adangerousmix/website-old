@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use GuzzleHttp\Client;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,32 +14,40 @@
 |
 */
 
-Route::get('/', 'PageController@home')->name('home');
-Route::get('home', 'PageController@home');
-Route::get('about', 'PageController@about')->name('about');
-Route::get('comics', 'PageController@comics')->name('comics');
-Route::get('podcast', 'PageController@podcast')->name('podcast');
-Route::get('movies', 'PageController@movies')->name('movies');
-Route::get('tv', 'PageController@tv')->name('tv');
+Route::get('/', function () {
+    $client = new Client([
+        'base_uri' => 'https://decapi.me',
+        'timeout' => 2.0,
+    ]);
 
-Route::get('posts', 'PostController@index')->middleware('auth');
-Route::get('posts/create', 'PostController@create')->middleware('auth');
-Route::post('posts/store', 'PostController@store')->middleware('auth');
-Route::get('posts/{post}/edit', 'PostController@edit')->middleware('auth');
-Route::get('posts/{post}', 'PostController@show');
-Route::put('posts/{post}', 'PostController@update')->middleware('auth');
+    $response = $client->request('GET', '/twitch/uptime/adangerousmix');
+    $twitch = $response->getBody()->getContents();
 
-Route::get('tag/{tag}', function ($tag) {
-    $posts = \App\Post::withAnyTags([$tag])
-        ->with('tags')
-        ->where('status', '=', 'Published')
-        ->paginate(10);
+    $response = $client->request('GET', '/youtube/latest_video?id=UCLpB_yYrVugRdjTf4tG4Z7A');
+    $youtube = $response->getBody()->getContents();
+    $youtube = substr($youtube, strpos($youtube, 'https://youtu.be') + 17, strlen($youtube));
 
-    return view('pages.tag', compact(['posts', 'tag']));
+    $video = 'twitch';
+
+    if ($twitch == 'adangerousmix is offline') {
+        $video = 'youtube';
+    }
+
+    return view('home', compact(['video', 'youtube']));
 });
 
-Auth::routes();
-Route::get('logout', function () {
-    Auth::logout();
-    return redirect()->route('home');
+Route::get('wp', function () {
+    return view('watchparty');
+});
+
+Route::get('watchparty', function () {
+    return view('watchparty');
+});
+
+// Route::get('custom-widgets', function () {
+//     return view('customwidgets');
+// });
+
+Route::get('crewlink', function () {
+    return view('crewlink');
 });

@@ -1,6 +1,4 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/vue-multiselect.min.css": "/css/vue-multiselect.min.css",
-    "/js/vue-multiselect.min.js": "/js/vue-multiselect.min.js"
+    "/css/app.css": "/css/app.css"
 }
