@@ -57,10 +57,10 @@
             <img class="inline-block w-16 -mt-2" src="/images/tiktok.svg" alt="Tik Tok"><br>
             <span class="block -mt-4">Tik Tok</span>
         </a>
-        <!-- <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #00EE00;" href="/custom-widgets">
+        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #00EE00;" href="/custom-widgets">
             <img class="inline-block w-16 -mt-2" src="/images/custom-widgets.svg" alt="Custom Widgets"><br>
             <span class="block -mt-4">Custom Widgets</span>
-        </a> -->
+        </a>
         <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #FE5F00;" href="/wp">
             <img class="inline-block w-16 -mt-2" src="/images/watch-party.svg" alt="Watch Party"><br>
             <span class="block -mt-4">Watch Party</span>
