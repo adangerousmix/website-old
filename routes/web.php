@@ -37,11 +37,7 @@ Route::get('/', function () {
 });
 
 Route::get('wp', function () {
-    return view('watchparty');
-});
-
-Route::get('watchparty', function () {
-    return view('watchparty');
+    return redirect('/watchparty');
 });
 
 Route::get('watchparty', function () {
