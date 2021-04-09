@@ -57,7 +57,7 @@
             <img class="inline-block w-16 -mt-2" src="/images/tiktok.svg" alt="Tik Tok"><br>
             <span class="block -mt-4">Tik Tok</span>
         </a>
-        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #008D1D;" href="/custom-widgets">
+        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #008D1D;" href="/widgets">
             <img class="inline-block w-16 -mt-2" src="/images/custom-widgets.svg" alt="Custom Widgets"><br>
             <span class="block -mt-4">Custom Widgets</span>
         </a>

@@ -48,12 +48,8 @@ Route::get('watchparty', function () {
     return view('watchparty');
 });
 
-Route::get('custom-widgets', function () {
+Route::get('widgets', function () {
     return view('customwidgets');
-});
-
-Route::get('crewlink', function () {
-    return view('crewlink');
 });
 
 Route::get('crewlink', function () {
