@@ -32,7 +32,7 @@
     <header class="flex justify-center border-solid border-black border-4 p-2 m-2 mb-1" style="background-color: #FF0000; height: 176px;">
         <a href="/"><img class="w-32" src="/images/adm-logo.svg" alt="ADangerousMix"></a>
     </header>
-    <nav class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-6">
+    <nav class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8">
         <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #1DA1F2;" href="https://twitter.com/adangerousmix">
             <img class="inline-block w-16 -mt-2" src="/images/twitter.svg" alt="Twitter"><br>
             <span class="block -mt-4">Twitter</span>
@@ -53,7 +53,15 @@
             <img class="inline-block w-16 -mt-2" src="/images/instagram.svg" alt="Instagram"><br>
             <span class="block -mt-4">Instagram</span>
         </a>
-        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #FFCC00;" href="/wp">
+        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #25F4EE; background: linear-gradient(45deg, rgba(37,244,238,1) 0%, rgba(254,44,85,1) 100%);" href="https://www.tiktok.com/@adangerousmix">
+            <img class="inline-block w-16 -mt-2" src="/images/tiktok.svg" alt="Tik Tok"><br>
+            <span class="block -mt-4">Tik Tok</span>
+        </a>
+        <!-- <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #00EE00;" href="/custom-widgets">
+            <img class="inline-block w-16 -mt-2" src="/images/custom-widgets.svg" alt="Custom Widgets"><br>
+            <span class="block -mt-4">Custom Widgets</span>
+        </a> -->
+        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #FE5F00;" href="/wp">
             <img class="inline-block w-16 -mt-2" src="/images/watch-party.svg" alt="Watch Party"><br>
             <span class="block -mt-4">Watch Party</span>
         </a>
