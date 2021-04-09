@@ -45,7 +45,7 @@
             <img class="inline-block w-16 -mt-2" src="/images/youtube.svg" alt="YouTube"><br>
             <span class="block -mt-4">YouTube</span>
         </a>
-        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #7289DA;" href="https://discord.gg/7N5HJq9">
+        <a class="menu-link border-solid border-black border-4 p-2 m-2 my-1 text-center font-bold text-white align-middle" style="background-color: #7289DA;" href="https://discord.gg/uNwbJmM824">
             <img class="inline-block w-16 -mt-2" src="/images/discord.svg" alt="Discord"><br>
             <span class="block -mt-4">Discord</span>
         </a>
