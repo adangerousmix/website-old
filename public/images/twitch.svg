@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 101 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1226,0)">
+        <g id="twitch" transform="matrix(0.588543,0,0,0.689575,1015.85,0)">
+            <rect x="357.607" y="0" width="169.911" height="145.017" style="fill:none;"/>
+            <g id="twitch1" serif:id="twitch" transform="matrix(0.722381,0,-5.23579e-32,0.616542,400.085,30.2115)">
+                <path d="M117.605,0L117.605,68.605L73.503,112.704L53.904,112.704L29.401,137.207L29.401,112.704L0,112.704L0,24.502L24.5,0L117.605,0ZM107.805,9.801L29.401,9.801L29.401,83.304L51.452,83.304L51.452,100.454L68.605,83.304L88.206,83.304L107.805,63.703L107.805,9.801ZM93.104,26.952L93.104,56.352L83.304,56.352L83.304,26.952L93.104,26.952ZM66.153,26.952L66.153,56.352L56.353,56.352L56.353,26.952L66.153,26.952Z" style="fill:white;"/>
+            </g>
+        </g>
+    </g>
+</svg>

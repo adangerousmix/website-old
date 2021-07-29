@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1393.72,-0.336823)">
+        <g id="tiktok" transform="matrix(0.588543,0,0,0.689575,1183.26,0.336823)">
+            <rect x="357.607" y="0" width="169.911" height="145.017" style="fill:none;"/>
+            <g id="tiktok1" serif:id="tiktok" transform="matrix(0.027444,0,0,0.0234231,442.562,72.02)">
+                <g transform="matrix(1,0,0,1,-1429.5,-1666.5)">
+                    <clipPath id="_clip1">
+                        <rect x="0" y="0" width="2859" height="3333"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip1)">
+                        <path d="M2081,0C2136,473 2400,755 2859,785L2859,1317C2593,1343 2360,1256 2089,1092L2089,2087C2089,3351 711,3746 157,2840C-199,2257 19,1234 1161,1193L1161,1754C1074,1768 981,1790 896,1819C642,1905 498,2066 538,2350C615,2894 1613,3055 1530,1992L1530,1L2081,1L2081,0Z" style="fill:white;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
