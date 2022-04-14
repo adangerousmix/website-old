@@ -1,0 +1,3 @@
+[submodule "public/widgets/extra-life-goal-alert-incentive"]
+	path = public/widgets/extra-life-goal-alert-incentive
+	url = git@github.com:adangerousmix/extra-life-goal-alert-incentive.git
